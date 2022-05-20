@@ -5,8 +5,6 @@ import sys
 from PyQt5 import QtGui, QtCore
 from PyQt5.QtWidgets import QDialog, QApplication, QPushButton, QHBoxLayout, QVBoxLayout, QLineEdit, QLabel, QMessageBox, QDoubleSpinBox
 
-import DarkTheme
-
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 import matplotlib.pyplot as plt
@@ -172,17 +170,17 @@ class Window(QDialog):
 
     # === grabbing the points for plotting ===
     def obtainFunctionPoints(self):
-    """
-    this function takes the sanitized input
-    and the sympy expression and calculates the points
-    to be drawn by substitution
-    the function calculates 2051 equally spaced points
-    within range for single variable
-    and 101 equally spaced points within range
-    for 2 variables
-    WARNING: single variable functions
-    are much slower but more accurate
-    """
+        """
+        this function takes the sanitized input
+        and the sympy expression and calculates the points
+        to be drawn by substitution
+        the function calculates 2051 equally spaced points
+        within range for single variable
+        and 101 equally spaced points within range
+        for 2 variables
+        WARNING: single variable functions
+        are much slower but more accurate
+        """
         x_values = []
         y_values = []
         function, validInput = self.inputSanitizing()
