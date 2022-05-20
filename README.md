@@ -12,7 +12,7 @@ prerequisites:
 
 examples:
 working examples
-y = x
+y = x                                       
 ![Alt text](exp1.png?raw=true "Optional Title")
 
 y = sin(x) where x is in radians
